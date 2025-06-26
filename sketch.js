@@ -5,10 +5,17 @@ let grid = [];
 
 let terrainCosts = [Infinity, 1, 5, 10];
 let terrainColors = [
+<<<<<<< main
+  '	#4B4E6D',
+  '	#FFE5B4',
+  '	#A68A64',
+  '	#A2D2FF'
+=======
   '#000000',
   '#f7f7f7',
   '#f4a582',
   '#0571b0'
+>>>>>>> main
 ];
 
 let agent, food;
@@ -124,18 +131,18 @@ function drawGrid() {
 
 function drawAgentAndFood() {
   // food
-  fill('#FF0000');
+  fill('#FFF685');
   rect(food.x * w + w*0.2, food.y * w + w*0.2, w*0.6, w*0.6);
 
   // agent
-  fill('#00FF00');
+  fill('#2B2D42');
   ellipse(agent.x * w + w/2, agent.y * w + w/2, w*0.6);
 }
 
 function drawSearchHighlights() {
   // frontier
   for (let node of openSet) {
-    fill('rgba(0,255,255,0.4)');
+    fill('#C1FBA4');
     rect(node.x * w, node.y * w, w, w);
   }
 
@@ -146,6 +153,11 @@ function drawSearchHighlights() {
   });
   // Path
   if (path.length > 0) {
+<<<<<<< main
+    for (let p of path) {
+      fill('#D65A31');
+      rect(p.x * w, p.y * w, w / 2, w / 2);
+=======
     push();
     stroke('#f33');
     strokeWeight(w * 0.2);
@@ -153,6 +165,7 @@ function drawSearchHighlights() {
     let drawPath = [agent_start, ...path]
     for (let p of drawPath) {
       vertex(p.x * w + w / 2, p.y * w + w / 2);
+>>>>>>> main
     }
     endShape();
     pop();

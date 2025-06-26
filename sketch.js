@@ -5,17 +5,10 @@ let grid = [];
 
 let terrainCosts = [Infinity, 1, 5, 10];
 let terrainColors = [
-<<<<<<< main
   '	#4B4E6D',
   '	#FFE5B4',
   '	#A68A64',
   '	#A2D2FF'
-=======
-  '#000000',
-  '#f7f7f7',
-  '#f4a582',
-  '#0571b0'
->>>>>>> main
 ];
 
 let agent, food;
@@ -153,11 +146,6 @@ function drawSearchHighlights() {
   });
   // Path
   if (path.length > 0) {
-<<<<<<< main
-    for (let p of path) {
-      fill('#D65A31');
-      rect(p.x * w, p.y * w, w / 2, w / 2);
-=======
     push();
     stroke('#f33');
     strokeWeight(w * 0.2);
@@ -165,7 +153,6 @@ function drawSearchHighlights() {
     let drawPath = [agent_start, ...path]
     for (let p of drawPath) {
       vertex(p.x * w + w / 2, p.y * w + w / 2);
->>>>>>> main
     }
     endShape();
     pop();

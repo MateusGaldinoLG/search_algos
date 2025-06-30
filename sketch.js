@@ -1,5 +1,5 @@
-let cols = 20;
-let rows = 20;
+let cols = 30;
+let rows = 30;
 let w = 20; // cell width
 let grid = [];
 
@@ -124,7 +124,7 @@ function drawGrid() {
 
 function drawAgentAndFood() {
   // food
-  fill('#FFF685');
+  fill('#00C853');
   rect(food.x * w + w*0.2, food.y * w + w*0.2, w*0.6, w*0.6);
 
   // agent
